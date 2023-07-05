@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poltawski Nowy', serif;
+}
+.fas {
+    font-size: 1.2em;
+}
+
+/* INICIO */
+/* seccion N A V */
+.navbar {
+    background-color: #000;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    align-items: center;
+    color: white;
+    position:fixed;
+    z-index: 50;
+}
+.navbar .logo {
+    height: 80px;
+    width: 80px;
+    grid-column: 2 / 3;
+}
+.navbar .logo-b {
+  height: 80px;
+  width: 80px;
+  margin-left: 2rem;
+  grid-column: 2 / 3;
+}
+.navbar .menu,
+.navbar .menu-contacto {
+    grid-column: 4 / 7;
+    display: flex;
+}
+.navbar ul li {
+    margin-right: 3em;
+    list-style: none;
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.navbar a:hover {
+    color: #3da407;
+}
+.navbar .menu-bar,
+.navbar .menu-bar-b {
+    display: none;
+}
+.navbar .social {
+    grid-column: 10 / 10;
+    justify-content: flex-end;
+}
+.navbar .social-b {
+  grid-column: 10 / 10;
+  justify-content: flex-end;
+  margin-right: 2rem;
+}
+.navbar .social i{
+    margin: 8px;
+}
+.navbar .social-b  i{
+  margin: 8px;
+}
+
+/* seccion Hero */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(16, 16, 16, .8), rgba(16, 16, 16, .9)) , url(../images/Duendes-Campeones-2021-Foto-Tribuna.jpg);
+    background-size:cover;
+    background-position: bottom;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    position: relative;
+}
+.hero .info-content {
+    grid-column: 3 / 9;
+    grid-row: 3 / 7;
+    color: #fff;
+    z-index: 1;
+    text-align: center;
+}
+.hero .info-content h3 {
+    font-family: 'Poltawski Nowy', serif;
+    font-size: 3.5rem;
+
+}
+.hero .info-content h1 {
+    font-size: 4rem;
+    color: #3da407;
+}
+.hero .info-content p {
+    font-family: 'Poltawski Nowy', serif;
+}
+
+/* seccion Seccion 1 */
+#noticias{
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    width: 100%;
+    height: 30px;
+
+}
+#noticias h1{
+    grid-column: 6 / 7;
+    grid-row: 1 / 7;
+    padding-top: 2rem;
+    height: 30vh;
+    text-align: center;
+    font-size: 2rem;
+}
+#noticias .noticia-1,
+#noticias .noticia-2,
+#noticias .noticia-3{
+    grid-row: 4 / 7;
+    grid-column: 1 / 11;
+    display: grid;
+    background-color: rgb(206, 240, 222);
+    width: 50vh;
+    height: 85vh;
+    margin-left: 1rem;
+}
+#noticias .noticia-1{
+  grid-column: 2 / 2;
+}
+#noticias .noticia-2{
+  grid-column: 6 / 6;
+}
+#noticias .noticia-3{
+  grid-column: 10 / 10;
+}
+
+#noticias .noticia-1 h3,
+#noticias .noticia-2 h3,
+#noticias .noticia-3 h3{
+  grid-column: 4 / 4;
+  grid-row: 3 / 3;
+  padding: 1rem 0;
+}
+
+#noticias .noticia-1 img,
+#noticias .noticia-2 img,
+#noticias .noticia-3 img{
+  width: 100%;
+  height: 100%;
+  grid-column: 2/7;
+  grid-row: 1 / 3;
+}
+
+#noticias .noticia-1 p,
+#noticias .noticia-2 p,
+#noticias .noticia-3 p{
+    width: 100%;
+    height: 100%;
+    padding:3rem .5rem 1rem .5rem;
+    display: grid;
+    grid-column: 2 / 7;
+    grid-row: 3 / 9;
+    font-size: 1rem;
+}
+#noticias .noticia-1 h6,
+#noticias .noticia-2 h6,
+#noticias .noticia-3 h6{
+  grid-column: 2 / 7;
+  grid-row: 11 / 11;
+  font-size: .6rem;
+}
+
+/* seccion Seccion 2 */
+#publicidad{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  width: 100%;
+  margin-top: 40rem;
+}
+#publicidad .video{
+  grid-column: 1 / 2;
+  margin: 0 3rem 2rem 5rem;
+}
+#publicidad .sponsors{
+  grid-column: 3 / 3;
+  text-align: center;
+  padding: 5rem 6rem 2rem 0;
+  display: block;
+}
+#publicidad .sponsors h1{
+  margin: 2.5rem;
+}
+#publicidad .sponsors img{
+  width: 12rem;
+  height: 8rem;
+  display: table-column;
+  margin: auto;
+}
+
+/* Footer */
+footer{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  width: 100%;
+  background-color: #000;
+  align-items: center;
+}
+footer .logo{
+  width: 150px;
+  height: 150px;
+  grid-column: 1 / 1;
+  display: flex;
+  margin: 2rem 3rem;
+}
+
+
+footer .informacion{
+  grid-column: 3 / 4;
+  font-size: .7rem;
+  justify-content: center;
+}
+footer .informacion h2{
+  color: white;
+  padding: .5rem 0;
+}
+footer .informacion h3{
+  color:darkgray;
+}
+
+footer .redes{
+  grid-column: 5 / 5;
+  color: white;
+  text-align: center;
+  margin-right: 2rem;
+}
+footer .redes a{
+  color: white;
+  margin: 1rem;
+}
+footer .redes h2{
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+/* Footer Contacto*/
+footer .logo-contacto{
+  width: 150px;
+  height: 150px;
+  grid-column: 1 / 1;
+  display: flex;
+  margin: 2rem 3rem;
+}
+footer .informacion-b{
+  width: 200px;
+  grid-column: 3 / 4;
+  justify-content: center;
+  font-family: 'Poltawski Nowy', serif;
+}
+footer .informacion-b h2{
+  color: white;
+  font-size: 1.2rem;
+}
+footer .informacion-b h3{
+  color:darkgray;
+  font-size: 1rem;
+}
+footer .redes-contacto{
+  grid-column: 5 / 5;
+  color: white;
+  text-align: center;
+  margin-right: 2rem;
+  font-family: 'Poltawski Nowy', serif;
+}
+footer .redes-contacto a{
+  color: white;
+  margin: 1rem;
+}
+footer .redes-contacto h2{
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.galeria-contenedor{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  padding-top: 5rem;
+}
+.galeria__img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.instalaciones-contenedor{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.instalaciones__img{
+  width: 100%;
+}
+
+
+.contacto{
+  height: 60vh;
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.informacion-b{
+  color: white;
+  grid-column: 3 / 4;
+  font-size: .7rem;
+  justify-content: center;
+}
+.informacion-b h2{
+  font-size: 1rem;
+}
+.informacion-b h3{
+  font-size: 1rem;
+  color:darkgray;
+}
+.institucion{
+  display: grid;
+}
+.institucion .historia{
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  width: 90%;
+  padding: 6rem 0 0 2rem;
+}
+.institucion .historia .texto{
+  width: 50%;
+  margin: 2rem;
+}
+.institucion .historia h3{
+  grid-column: 1 / 2;
+  font-size: 1rem;
+}
+.institucion .historia h2{
+  font-size: 1.3rem;
+  grid-column: 1 / 2;
+  color: #3da407;
+  margin-top: 2rem;
+}
+.institucion .historia h4{
+  font-size: 1rem;
+  grid-column: 1 / 2;
+}
+
+.institucion .historia .imagen{
+  grid-column: 2 / 2;
+  grid-row: -2 / 2;
+  width: 40%;
+  margin: auto;
+}
+.institucion .historia .imagen img{
+  width: 100%;
+  border-radius: 4rem;
+}
+
+
+/*MOVILE INICIO */
+@media (max-width: 600px){
+
+  .navbar {
+    background-color: #3da407;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    align-items: center;
+    position: relative;
+  }
+  .navbar .logo,
+  .navbar .logo-b {
+    height: 60px;
+    width: 60px;
+    grid-column: 2 / 3;
+  }
+  .navbar .menu,
+  .navbar .menu-contacto {
+    display: grid;
+    grid-column: 4 / 7;
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    align-items: center;
+    background-color: #3da407;
+    transition: all 1s;
+    margin-top: 34em;
+    z-index: 1;
+  }
+  .navbar .menu {
+    transform: translateX(170%);
+  }
+  .navbar .menu-contacto {
+    transform: translateX(100%);
+  }
+  .navbar ul li {
+    margin-right: 3rem;
+    list-style: none;
+  }
+  .navbar ul li a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+  .navbar ul li a:hover {
+    color: white;
+  }
+  /* .navbar .menu-bar {
+    display: none;
+  } */
+  .navbar .menu-bar,
+  .navbar .menu-bar-b {
+    display: block;
+  }
+  .navbar .menu-bar .fas,
+  .navbar .menu-bar-b .fas {
+    color: #181818;
+  }
+  .navbar .menu li,
+  .navbar .menu-contacto li {
+    list-style: none;
+    margin: 0 auto;
+  }
+  .navbar .menu li a,
+  .navbar .menu-contacto li a {
+    text-decoration: none;
+    color: #181818;
+    font-size: 1rem;
+  }
+  .navbar .menu-bar {
+    grid-column: 8 / 10;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .navbar .menu-bar-b {
+    grid-column: 8 / 10;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1;
+    margin-right: 1.6rem;
+    /* display: flex; */
+  }
+  .navbar .social,
+  .navbar .social-b{
+    display: none;
+  }
+
+  .hero .info-content{
+    display: flex;
+    flex-direction: column;
+  }
+  .hero .info-content h1{
+    font-size: 2.5rem;
+    padding-top: 2rem;
+  }
+  .hero .info-content h3{
+    font-size: 2rem;
+    padding-top: 1rem;
+  }
+
+  #noticias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  #noticias h1{
+    font-size: 1.5rem;
+    height: 5rem;
+  }
+  #noticias .noticia-2,
+  #noticias .noticia-3{
+    margin-top: 2rem;
+  }
+  #publicidad{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  #publicidad .video{
+    display: none;
+    flex-direction: column;
+  }
+  #publicidad .sponsors{
+    padding: 0;
+  }
+  #publicidad .sponsors h1{
+    font-size: 1rem;
+    margin: 2rem 0 .8rem 0;
+  }
+  #publicidad .sponsors .sponsors-img img{
+    width: 6rem;
+    height: 5rem;
+  }
+  .footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .footer .logo{
+    height: 70px;
+    width: 70px;
+  }
+  .footer .informacion{
+    font-size: .3rem;
+  }
+  .footer .redes h2{
+    font-size: .4rem;
+  }
+  .footer .redes a{
+    font-size: .5rem;
+  }
+
+
+  .footer-contacto{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-contacto .logo-contacto{
+    height: 70px;
+    width: 70px;
+    margin: 2rem 1.5rem;
+  }
+  .footer-contacto .informacion-b{
+    width: 150px;
+  }
+  .footer-contacto .informacion-b h2,
+  .footer-contacto .informacion-b h3{
+    font-size: .5rem;
+  }
+  .footer-contacto .redes-contacto{
+    justify-content: space-between;
+    margin-bottom: 0;
+  }
+  .footer-contacto .redes-contacto h2{
+    font-size: .4rem;
+  }
+  .footer-contacto .redes-contacto a{
+    font-size: .5rem;
+  }
+
+  /*MOVILE INSTITUCION */
+  .institucion {
+    display: flex;
+  }
+  .institucion .historia{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  /*MOVILE INSTALACIONES */
+  .instalaciones{
+    display: flex;
+  }
+
+  /*MOVILE GALERIA */
+  .galeria .galeria-contenedor{
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 0;
+  }
+}
+
