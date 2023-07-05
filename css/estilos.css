@@ -177,6 +177,7 @@ body {
   font-size: .6rem;
 }
 
+
 /* seccion Seccion 2 */
 #publicidad{
   display: grid;
@@ -221,8 +222,6 @@ footer .logo{
   display: flex;
   margin: 2rem 3rem;
 }
-
-
 footer .informacion{
   grid-column: 3 / 4;
   font-size: .7rem;
@@ -235,7 +234,6 @@ footer .informacion h2{
 footer .informacion h3{
   color:darkgray;
 }
-
 footer .redes{
   grid-column: 5 / 5;
   color: white;
