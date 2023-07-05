@@ -298,7 +298,6 @@ footer .redes-contacto h2{
   object-fit: cover;
 }
 
-
 .instalaciones-contenedor{
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -306,8 +305,6 @@ footer .redes-contacto h2{
 .instalaciones__img{
   width: 100%;
 }
-
-
 .contacto{
   height: 60vh;
   margin: 5%;
@@ -372,7 +369,6 @@ footer .redes-contacto h2{
 
 /*MOVILE INICIO */
 @media (max-width: 600px){
-
   .navbar {
     background-color: #3da407;
     display: grid;
@@ -417,9 +413,6 @@ footer .redes-contacto h2{
   .navbar ul li a:hover {
     color: white;
   }
-  /* .navbar .menu-bar {
-    display: none;
-  } */
   .navbar .menu-bar,
   .navbar .menu-bar-b {
     display: block;
@@ -453,13 +446,11 @@ footer .redes-contacto h2{
     cursor: pointer;
     z-index: 1;
     margin-right: 1.6rem;
-    /* display: flex; */
   }
   .navbar .social,
   .navbar .social-b{
     display: none;
   }
-
   .hero .info-content{
     display: flex;
     flex-direction: column;
@@ -472,7 +463,6 @@ footer .redes-contacto h2{
     font-size: 2rem;
     padding-top: 1rem;
   }
-
   #noticias{
     display: flex;
     flex-direction: column;
