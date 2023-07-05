@@ -517,8 +517,6 @@ footer .redes-contacto h2{
   .footer .redes a{
     font-size: .5rem;
   }
-
-
   .footer-contacto{
     width: 100%;
     display: flex;
@@ -569,4 +567,3 @@ footer .redes-contacto h2{
     padding-top: 0;
   }
 }
-
