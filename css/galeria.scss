@@ -1,0 +1,21 @@
+@import url(./styles.css);
+    .galeria-contenedor{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        padding-top: 5rem;
+        .galeria__img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+@media (max-width: 600px){
+body{
+    .galeria{
+        .galeria-contenedor{
+            grid-template-columns: repeat(1, 1fr);
+            padding-top: 0;
+        }
+    }
+}}

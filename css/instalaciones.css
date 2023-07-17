@@ -1,0 +1,14 @@
+@import url(./styles.css);
+.instalaciones-contenedor {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.instalaciones-contenedor .instalaciones__img {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  body .instalaciones {
+    display: flex;
+  }
+}/*# sourceMappingURL=instalaciones.css.map */

@@ -1,0 +1,42 @@
+@import url(./styles.css);
+header{
+    display: flex;
+    .navbar{
+        display: flex;
+        width: 100%;
+        .logo-b {
+            height: 80px;
+            width: 80px;
+            margin-left: 2rem;
+            grid-column: 2 / 3;
+        }
+        .menu-contacto {
+            grid-column: 4 / 7;
+            display: flex;
+        }
+        .menu-bar-b {
+            display: none;
+        }
+        .social-b {
+            grid-column: 10 / 10;
+            justify-content: flex-end;
+            margin-right: 2rem;
+            i{
+                margin: 8px;
+            }
+        }
+    }
+}
+.bootstrap{
+    margin-top: 9rem;
+}
+
+.contacto{
+    height: 60vh;
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
