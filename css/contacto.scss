@@ -1,5 +1,7 @@
 @import url(./styles.css);
+@import "_variable";
 header{
+    font-family: $fuente;
     display: flex;
     .navbar{
         display: flex;
@@ -7,7 +9,7 @@ header{
         .logo-b {
             height: 80px;
             width: 80px;
-            margin-left: 2rem;
+            margin-left: 3rem;
             grid-column: 2 / 3;
         }
         .menu-contacto {
@@ -28,7 +30,10 @@ header{
     }
 }
 .bootstrap{
-    margin-top: 9rem;
+    font-family: $fuente;
+    .contacto{
+        margin-top: 9rem;
+    }
 }
 
 .contacto{
@@ -39,4 +44,43 @@ header{
     align-items: center;
     flex-direction: column;
 }
+
+@media (max-width: 560px){
+    .header{
+        .navbar{
+            .menu-contacto{
+                display: grid;
+                width: 30%;
+                transform: translateX(230%);
+                padding-left: 0;
+                li {
+                    list-style: none;
+                    a{
+                        color: #181818;
+                        font-size: 1rem;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+                    a:hover {
+                        color: white;
+                    }
+                }
+            }
+            .visible{
+                opacity: 1;
+                visibility: visible;
+            }
+            .menu-bar-b{
+                display: block;
+            }
+            
+        }
+    }
+    .bootstrap{
+        .contacto{
+            margin-top: 1rem;
+        }
+    }
+}
+
 

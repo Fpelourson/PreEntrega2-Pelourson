@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 @import url(./);
+@import "_variables";
 
 * {
     margin: 0;
@@ -8,26 +9,27 @@
 }
 
 body {
-    font-family: 'Poltawski Nowy', serif;
+    font-family: $fuente;
     /* seccion N A V */
     .navbar {
-        background-color: #000;
+        background-color: $color-secundario;
         display: grid;
         grid-template-columns: repeat(10, 1fr);
         align-items: center;
         color: white;
         position:fixed;
         z-index: 50;
-        .logo {
-            height: 80px;
-            width: 80px;
-            grid-column: 2 / 3;
-        }
-        .logo-b {
-            height: 80px;
-            width: 80px;
-            margin-left: 2rem;
-            grid-column: 2 / 3;
+        a{
+            .logo {
+                height: 80px;
+                width: 80px;
+                margin-left: 3rem ;
+            }
+            .logo-b {
+                height: 80px;
+                width: 80px;
+                margin-left: 2rem;
+            }
         }
         .menu {
             grid-column: 4 / 7;
@@ -40,9 +42,9 @@ body {
                 text-decoration: none;
                 color: white;
                 cursor: pointer;
-            }
-            a:hover {
-                color: #3da407;
+                &:hover{
+                    color: $color-primario;
+                }
             }
         }
         .menu-contacto{
@@ -65,7 +67,7 @@ body {
                 cursor: pointer;
             }
             a:hover {
-                color: #3da407;
+                color: $color-primario;
             }
         }
         .social-b {
@@ -81,7 +83,7 @@ body {
                 cursor: pointer;
             }
             a:hover {
-                color: #3da407;
+                color: $color-primario;
             }
         }
     }
@@ -108,7 +110,7 @@ body {
             }
             h1 {
                 font-size: 4rem;
-                color: #3da407;
+                color: $color-primario;
             }
         }
     }
@@ -208,7 +210,7 @@ body {
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(1, 1fr);
         width: 100%;
-        background-color: #000;
+        background-color: $color-secundario;
         align-items: center;
         .logo{
             width: 150px;
@@ -255,7 +257,7 @@ body {
             width: 200px;
             grid-column: 3 / 4;
             justify-content: center;
-            font-family: 'Poltawski Nowy', serif;
+            font-family: $fuente;
             h2{
                 color: white;
                 font-size: 1.2rem;
@@ -270,7 +272,7 @@ body {
             color: white;
             text-align: center;
             margin-right: 2rem;
-            font-family: 'Poltawski Nowy', serif;
+            font-family: $fuente;
             a{
                 color: white;
                 margin: 1rem;
@@ -287,7 +289,7 @@ body {
 @media (max-width: 600px){
 body{
     .navbar {
-        background-color: #3da407;
+        background-color: $color-primario;
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         align-items: center;
@@ -306,7 +308,7 @@ body{
             width: 100%;
             height: 70vh;
             align-items: center;
-            background-color: #3da407;
+            background-color: $color-primario;
             transition: all 1s;
             margin-top: 34em;
             z-index: 1;
@@ -320,9 +322,7 @@ body{
         .menu {
             transform: translateX(60%);
         }
-        .menu-contacto {
-            transform: translateX(100%);
-        }
+        
         ul li {
             margin-right: 3rem;
             list-style: none;
@@ -331,7 +331,6 @@ body{
                 text-decoration: none;
                 color: white;
                 cursor: pointer;
-                text-decoration: none;
                 color: #181818;
                 font-size: 1rem;
             }

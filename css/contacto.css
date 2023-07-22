@@ -1,5 +1,6 @@
 @import url(./styles.css);
 header {
+  font-family: "Poltawski Nowy", serif;
   display: flex;
 }
 header .navbar {
@@ -9,7 +10,7 @@ header .navbar {
 header .navbar .logo-b {
   height: 80px;
   width: 80px;
-  margin-left: 2rem;
+  margin-left: 3rem;
   grid-column: 2/3;
 }
 header .navbar .menu-contacto {
@@ -29,6 +30,9 @@ header .navbar .social-b i {
 }
 
 .bootstrap {
+  font-family: "Poltawski Nowy", serif;
+}
+.bootstrap .contacto {
   margin-top: 9rem;
 }
 
@@ -39,4 +43,35 @@ header .navbar .social-b i {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+@media (max-width: 560px) {
+  .header .navbar .menu-contacto {
+    display: grid;
+    width: 30%;
+    transform: translateX(230%);
+    padding-left: 0;
+  }
+  .header .navbar .menu-contacto li {
+    list-style: none;
+  }
+  .header .navbar .menu-contacto li a {
+    color: #181818;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .header .navbar .menu-contacto li a:hover {
+    color: white;
+  }
+  .header .navbar .visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .header .navbar .menu-bar-b {
+    display: block;
+  }
+  .bootstrap .contacto {
+    margin-top: 1rem;
+  }
 }/*# sourceMappingURL=contacto.css.map */

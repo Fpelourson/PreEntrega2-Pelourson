@@ -23,16 +23,15 @@ body .navbar {
   position: fixed;
   z-index: 50;
 }
-body .navbar .logo {
+body .navbar a .logo {
   height: 80px;
   width: 80px;
-  grid-column: 2/3;
+  margin-left: 3rem;
 }
-body .navbar .logo-b {
+body .navbar a .logo-b {
   height: 80px;
   width: 80px;
   margin-left: 2rem;
-  grid-column: 2/3;
 }
 body .navbar .menu {
   grid-column: 4/7;
@@ -326,9 +325,6 @@ body footer .redes-contacto h2 {
   body .navbar .menu {
     transform: translateX(60%);
   }
-  body .navbar .menu-contacto {
-    transform: translateX(100%);
-  }
   body .navbar ul li {
     margin-right: 3rem;
     list-style: none;
@@ -338,7 +334,6 @@ body footer .redes-contacto h2 {
     text-decoration: none;
     color: white;
     cursor: pointer;
-    text-decoration: none;
     color: #181818;
     font-size: 1rem;
   }
