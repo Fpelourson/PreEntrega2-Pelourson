@@ -1,11 +1,12 @@
 @import url(./styles.css);
-@import "_variable";
+@import "_variables";
 header{
     font-family: $fuente;
     display: flex;
     .navbar{
         display: flex;
         width: 100%;
+        padding: 0;
         .logo-b {
             height: 80px;
             width: 80px;
