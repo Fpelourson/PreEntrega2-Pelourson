@@ -1,20 +1,34 @@
 @import url(./styles.css);
-.galeria-contenedor {
+.galeria {
+  padding-top: 5rem;
+}
+.galeria .galeria-contenedor {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
-  padding-top: 5rem;
+  padding-top: 0.5rem;
 }
-.galeria-contenedor .galeria__img {
+.galeria .galeria-contenedor .galeria__img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+  body .navbar {
+    position: relative;
+  }
+  body .galeria {
+    padding: 0.5rem;
+  }
   body .galeria .galeria-contenedor {
     grid-template-columns: repeat(1, 1fr);
     padding-top: 0;
+  }
+}
+@media (min-width: 700px) and (max-width: 960px) {
+  .galeria {
+    padding: 0.1rem;
   }
 }/*# sourceMappingURL=galeria.css.map */

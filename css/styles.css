@@ -92,7 +92,7 @@ body .navbar .social-b a:hover {
 }
 body .hero {
   height: 100vh;
-  background-image: linear-gradient(rgba(16, 16, 16, 0.3), rgba(16, 16, 16, 0.2)), url(../images/Duendes-Campeones-2021-Foto-Tribuna.jpg);
+  background-image: linear-gradient(rgba(16, 16, 16, 0.5), rgba(16, 16, 16, 0.5)), url(../images/Duendes-Campeones-2021-Foto-Tribuna.jpg);
   background-size: cover;
   background-position: bottom;
   max-width: 100%;
@@ -102,19 +102,21 @@ body .hero {
   position: relative;
 }
 body .hero .info-content {
-  grid-column: 3/9;
-  grid-row: 3/7;
+  grid-column: 4/8;
+  grid-row: 1/4;
   color: #fff;
   z-index: 1;
   text-align: center;
 }
-body .hero .info-content h3 {
-  font-family: "Poltawski Nowy", serif;
-  font-size: 3.5rem;
-}
 body .hero .info-content h1 {
+  background-color: rgba(12, 9, 9, 0.357);
   font-size: 4rem;
+  border-radius: 15%;
   color: #3da407;
+  animation-name: titulo;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
 }
 body #noticias {
   display: grid;
@@ -130,6 +132,7 @@ body #noticias h2 {
   height: 25vh;
   text-align: center;
   font-size: 2.3rem;
+  letter-spacing: 8px;
 }
 body #noticias .noticia-1,
 body #noticias .noticia-2,
@@ -154,17 +157,19 @@ body #publicidad {
 body #publicidad .video {
   grid-column: 1/2;
   margin-left: 3rem;
+  display: flex;
 }
 body #publicidad .sponsors {
   grid-column: 2/2;
   text-align: center;
   display: block;
-  width: 50%;
+  width: 100%;
   margin: auto;
 }
 body #publicidad .sponsors h2 {
   margin-bottom: 2.5rem;
   font-size: 1.8rem;
+  letter-spacing: 8px;
 }
 body #publicidad .sponsors img {
   width: 12rem;
@@ -174,7 +179,6 @@ body #publicidad .sponsors img {
 }
 body footer {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(1, 1fr);
   width: 100%;
   background-color: #000;
@@ -189,16 +193,35 @@ body footer .logo {
   margin: 2rem 3rem;
 }
 body footer .informacion {
-  grid-column: 3/4;
+  grid-column: 3/3;
   font-size: 0.7rem;
-  justify-content: center;
 }
-body footer .informacion h2 {
-  color: white;
-  padding: 0.5rem 0;
+body footer .informacion .direccion {
+  display: flex;
+  align-items: center;
+  margin: 1rem auto;
 }
-body footer .informacion h3 {
+body footer .informacion .direccion h3 {
   color: darkgray;
+  padding-left: 0.5rem;
+}
+body footer .informacion .telefono {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+body footer .informacion .telefono h3 {
+  color: darkgray;
+  padding-left: 0.5rem;
+}
+body footer .informacion .mail {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+body footer .informacion .mail h3 {
+  color: darkgray;
+  padding-left: 0.5rem;
 }
 body footer .redes {
   grid-column: 5/5;
@@ -210,9 +233,24 @@ body footer .redes a {
   color: white;
   margin: 1rem;
 }
+body footer .redes a :hover {
+  color: #3da407;
+  cursor: pointer;
+}
 body footer .redes h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding-bottom: 1rem;
+}
+body footer .copyright {
+  grid-column: 3/3;
+  display: flex;
+  margin: auto;
+  font-size: 0.6rem;
+}
+body footer .copyright h4 {
+  color: #fff;
+  padding-left: 6px;
+  font-size: 0.6rem;
 }
 body footer .logo-contacto {
   width: 150px;
@@ -222,21 +260,28 @@ body footer .logo-contacto {
   margin: 2rem 3rem;
 }
 body footer .informacion-b {
-  width: 200px;
   grid-column: 3/4;
   justify-content: center;
   font-family: "Poltawski Nowy", serif;
 }
-body footer .informacion-b h2 {
-  color: white;
-  font-size: 1.2rem;
+body footer .informacion-b .direccion,
+body footer .informacion-b .telefono,
+body footer .informacion-b .mail {
+  display: flex;
+  align-items: center;
+  margin: 1rem auto;
+  font-size: 0.7rem;
 }
-body footer .informacion-b h3 {
+body footer .informacion-b .direccion h3,
+body footer .informacion-b .telefono h3,
+body footer .informacion-b .mail h3 {
   color: darkgray;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  padding-left: 0.5rem;
 }
 body footer .redes-contacto {
   grid-column: 5/5;
+  display: block;
   color: white;
   text-align: center;
   margin-right: 2rem;
@@ -247,18 +292,17 @@ body footer .redes-contacto a {
   margin: 1rem;
 }
 body footer .redes-contacto h2 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding-bottom: 1rem;
 }
 
 /*MOVILE INICIO */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   body .navbar {
     background-color: #3da407;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     align-items: center;
-    position: relative;
   }
   body .navbar .logo,
   body .navbar .logo-b {
@@ -335,10 +379,11 @@ body footer .redes-contacto h2 {
   body .hero .info-content {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   body .hero .info-content h1 {
     font-size: 2.5rem;
-    padding-top: 2rem;
+    margin-top: 2.2rem;
   }
   body .hero .info-content h3 {
     font-size: 2rem;
@@ -353,6 +398,7 @@ body footer .redes-contacto h2 {
   body #noticias h2 {
     font-size: 1.5rem;
     height: 5rem;
+    margin-bottom: 1rem;
   }
   body #noticias .noticia-2,
   body #noticias .noticia-3 {
@@ -398,9 +444,12 @@ body footer .redes-contacto h2 {
   body .footer .redes a {
     font-size: 0.5rem;
   }
+  body .footer .copyright {
+    display: none;
+  }
   body .footer-contacto {
-    width: 100%;
     display: flex;
+    width: 100%;
     justify-content: space-between;
   }
   body .footer-contacto .logo-contacto {
@@ -409,30 +458,45 @@ body footer .redes-contacto h2 {
     margin: 2rem 1.5rem;
   }
   body .footer-contacto .informacion-b {
+    font-size: 0.3rem;
+    align-items: center;
     width: 150px;
   }
-  body .footer-contacto .informacion-b h2,
-  body .footer-contacto .informacion-b h3 {
+  body .footer-contacto .informacion-b .direccion,
+  body .footer-contacto .informacion-b .telefono,
+  body .footer-contacto .informacion-b .mail {
+    display: flex;
+    align-items: center;
+    margin: 1rem auto;
+  }
+  body .footer-contacto .informacion-b .direccion h3,
+  body .footer-contacto .informacion-b .telefono h3,
+  body .footer-contacto .informacion-b .mail h3 {
     font-size: 0.5rem;
+    padding: 0.3rem;
   }
   body .footer-contacto .redes-contacto {
     justify-content: space-between;
     margin-bottom: 0;
   }
   body .footer-contacto .redes-contacto h2 {
-    font-size: 0.4rem;
+    font-size: 0.6rem;
   }
   body .footer-contacto .redes-contacto a {
     font-size: 0.5rem;
   }
+  body .footer-contacto .copyright {
+    display: none;
+  }
 }
-@media (min-width: 600px) and (max-width: 960px) {
+@media (min-width: 700px) and (max-width: 960px) {
   body .navbar {
     display: flex;
     width: 100%;
     align-items: center;
     margin: auto;
     justify-content: center;
+    position: relative;
   }
   body .navbar .logo {
     margin-right: 1rem;
@@ -446,21 +510,23 @@ body footer .redes-contacto h2 {
     width: 100%;
   }
   body .hero .info-content {
-    margin: auto;
+    display: none;
   }
   body #noticias {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
   }
   body #noticias .noticia-1,
   body #noticias .noticia-2,
   body #noticias .noticia-3 {
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
   }
   body #publicidad {
     width: 100%;
-    margin-top: 100rem;
     display: flex;
     flex-direction: column;
   }
@@ -468,7 +534,7 @@ body footer .redes-contacto h2 {
     display: none;
   }
   body #publicidad .sponsors {
-    padding: 0;
+    padding-top: 3rem;
     align-items: center;
   }
   body #publicidad .sponsors .sponsors-img {
@@ -478,5 +544,38 @@ body footer .redes-contacto h2 {
   body #publicidad .sponsors .sponsors-img img {
     width: 8rem;
     height: 6rem;
+  }
+  body .footer .informacion .direccion h3,
+  body .footer .informacion .telefono h3,
+  body .footer .informacion .mail h3 {
+    font-size: 0.5rem;
+  }
+  body .footer .redes h2 {
+    font-size: 1rem;
+  }
+  body .footer .copyright {
+    font-size: 0.5rem;
+  }
+  body .footer .copyright h4 {
+    font-size: 0.3rem;
+  }
+  body .footer-contacto .informacion-b .direccion h3,
+  body .footer-contacto .informacion-b .telefono h3,
+  body .footer-contacto .informacion-b .mail h3 {
+    font-size: 0.5rem;
+  }
+  body .footer-contacto .copyright {
+    font-size: 0.5rem;
+  }
+  body .footer-contacto .copyright h4 {
+    font-size: 0.3rem;
+  }
+}
+@keyframes titulo {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
   }
 }/*# sourceMappingURL=styles.css.map */

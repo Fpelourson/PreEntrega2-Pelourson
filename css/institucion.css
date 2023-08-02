@@ -1,17 +1,33 @@
 @import url(./styles.css);
-.institucion {
-  display: grid;
+.navbar {
+  position: relative;
 }
+
 .institucion .historia {
   display: flex;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  width: 90%;
-  padding: 6rem 0 0 2rem;
+  flex-direction: column;
+  width: 1000px;
+  padding: 6rem 0 0 0;
+  align-items: center;
+  margin: auto;
+}
+.institucion .historia h2 {
+  margin-left: 2rem;
 }
 .institucion .historia .texto {
-  width: 50%;
-  margin: 2rem;
+  margin: 1rem 2rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 1100p;
+}
+.institucion .historia .texto .retro {
+  display: flex;
+  width: 100%;
+  margin: 1rem auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .institucion .historia .texto h3 {
   grid-column: 1/2;
@@ -27,6 +43,13 @@
   font-size: 1rem;
   grid-column: 1/2;
 }
+.institucion .historia .texto .inicios img {
+  width: 100%;
+  margin-top: 2rem;
+}
+.institucion .historia .texto .inicios h3 {
+  margin: 1rem 0;
+}
 .institucion .historia .imagen {
   grid-column: 2/2;
   grid-row: -2/2;
@@ -38,14 +61,60 @@
   border-radius: 4rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+  body .navbar {
+    position: relative;
+  }
   body .institucion {
     display: flex;
+    width: 100%;
   }
   body .institucion .historia {
     width: 100%;
     flex-direction: column;
     align-items: center;
     padding: 0;
+    margin-top: 1rem;
+  }
+  body .institucion .historia .texto .retro .retro-img-1 {
+    display: flex;
+  }
+  body .institucion .historia .texto .retro .retro-img-1 img {
+    width: 100%;
+  }
+}
+@media (min-width: 700px) and (max-width: 960px) {
+  body .navbar {
+    position: relative;
+  }
+  body .institucion {
+    display: flex;
+    width: 100%;
+  }
+  body .institucion .historia {
+    width: 100%;
+    padding: 1rem 0 0 0;
+  }
+  body .institucion .historia .texto {
+    width: 100%;
+    display: flex;
+    padding: 1rem 2rem;
+  }
+  body .institucion .historia .texto h3 {
+    display: flex;
+    width: 100%;
+  }
+  body .institucion .historia .texto .retro {
+    width: 100%;
+    display: flex;
+  }
+  body .institucion .historia .texto .retro .retro-img-1 {
+    width: 100%;
+    display: flex;
+  }
+  body .institucion .historia .texto .retro .retro-img-1 img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }/*# sourceMappingURL=institucion.css.map */

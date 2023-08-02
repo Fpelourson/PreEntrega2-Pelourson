@@ -7,6 +7,7 @@ header .navbar {
   display: flex;
   width: 100%;
   padding: 0;
+  position: relative;
 }
 header .navbar .logo-b {
   height: 80px;
@@ -32,12 +33,9 @@ header .navbar .social-b i {
 
 .bootstrap {
   font-family: "Poltawski Nowy", serif;
+  padding-top: 1rem;
 }
 .bootstrap .contacto {
-  margin-top: 9rem;
-}
-
-.contacto {
   height: 60vh;
   margin: 5%;
   display: flex;
@@ -46,7 +44,7 @@ header .navbar .social-b i {
   flex-direction: column;
 }
 
-@media (max-width: 560px) {
+@media (max-width: 700px) {
   .header .navbar .menu-contacto {
     display: grid;
     width: 30%;

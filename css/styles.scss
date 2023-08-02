@@ -92,7 +92,7 @@ body {
     /* seccion Hero */
     .hero {
         height: 100vh;
-        background-image: linear-gradient(rgba(16, 16, 16, .3), rgba(16, 16, 16, .2)) , url(../images/Duendes-Campeones-2021-Foto-Tribuna.jpg);
+        background-image: linear-gradient(rgba(16, 16, 16, .5), rgba(16, 16, 16, .5)) , url(../images/Duendes-Campeones-2021-Foto-Tribuna.jpg);
         background-size:cover;
         background-position: bottom;
         max-width: 100%;
@@ -101,18 +101,20 @@ body {
         grid-template-rows: repeat(8, 1fr);
         position: relative;
         .info-content {
-            grid-column: 3 / 9;
-            grid-row: 3 / 7;
+            grid-column: 4 / 8;
+            grid-row: 1 / 4;
             color: #fff;
             z-index: 1;
             text-align: center;
-            h3 {
-                font-family: 'Poltawski Nowy', serif;
-                font-size: 3.5rem;
-            }
             h1 {
+                background-color:rgba(12, 9, 9, 0.357);
                 font-size: 4rem;
+                border-radius: 15%;
                 color: $color-primario;
+                animation-name: titulo;
+                animation-duration: 3s;
+                animation-direction: alternate;
+                animation-iteration-count: 2;
             }
         }
     }
@@ -130,6 +132,7 @@ body {
             height: 25vh;
             text-align: center;
             font-size: 2.3rem;
+            letter-spacing: 8px;
         }
         .noticia-1,
         .noticia-2,
@@ -154,16 +157,18 @@ body {
         .video{
             grid-column: 1 / 2;
             margin-left: 3rem;
+            display: flex;
         }
         .sponsors{
             grid-column: 2 / 2;
             text-align: center;
             display: block;
-            width: 50%;
+            width: 100%;
             margin: auto;
             h2{
                 margin-bottom: 2.5rem;
                 font-size: 1.8rem;
+                letter-spacing: 8px;
             }
             img{
                 width: 12rem;
@@ -176,7 +181,6 @@ body {
     /* Footer */
     footer{
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(1, 1fr);
         width: 100%;
         background-color: $color-secundario;
@@ -189,16 +193,37 @@ body {
             margin: 2rem 3rem;
         }
         .informacion{
-            grid-column: 3 / 4;
+            grid-column: 3 / 3;
             font-size: .7rem;
-            justify-content: center;
-            h2{
-                color: white;
-                padding: .5rem 0;
+            .direccion{
+                display: flex;
+                align-items: center;
+                margin: 1rem auto;
+                h3{
+                    color:darkgray;
+                    padding-left: .5rem;
+                }
             }
-            h3{
-                color:darkgray;
+            .telefono{
+                display: flex;
+                align-items: center;
+                margin: 1rem 0;
+                h3{
+                    color:darkgray;
+                    padding-left: .5rem;
+                }
             }
+            .mail{
+                display: flex;
+                align-items: center;
+                margin: 1rem 0;
+                h3{
+                    color:darkgray;
+                    padding-left: .5rem;
+                }
+            }
+            
+        
         }
         .redes{
             grid-column: 5 / 5;
@@ -208,10 +233,25 @@ body {
             a{
                 color: white;
                 margin: 1rem;
+                :hover{
+                    color: $color-primario;
+                    cursor: pointer;
+                }
             }
             h2{
-                font-size: 1.5rem;
+                font-size: 1.3rem;
                 padding-bottom: 1rem;
+            }
+        }
+        .copyright{
+            grid-column: 3 / 3;
+            display: flex;
+            margin: auto;
+            font-size: .6rem;
+            h4{
+                color: #fff;
+                padding-left: 6px;
+                font-size: .6rem;
             }
         }
         /* Footer Contacto*/
@@ -223,21 +263,28 @@ body {
             margin: 2rem 3rem;
         }
         .informacion-b{
-            width: 200px;
             grid-column: 3 / 4;
             justify-content: center;
             font-family: $fuente;
-            h2{
-                color: white;
-                font-size: 1.2rem;
+            .direccion,
+            .telefono,
+            .mail{
+                display: flex;
+                align-items: center;
+                margin: 1rem auto;
+                font-size: .7rem;
+                h3{
+                    color:darkgray;
+                    font-size: .8rem;
+                    padding-left: .5rem;
+                }
             }
-            h3{
-                color:darkgray;
-                font-size: 1rem;
-            }
+            
+            
         }
         .redes-contacto{
             grid-column: 5 / 5;
+            display: block;
             color: white;
             text-align: center;
             margin-right: 2rem;
@@ -247,7 +294,7 @@ body {
                 margin: 1rem;
             }
             h2{
-                font-size: 1.5rem;
+                font-size: 1.3rem;
                 padding-bottom: 1rem;
             }
         }
@@ -255,14 +302,13 @@ body {
 }
 
 /*MOVILE INICIO */
-@media (max-width: 600px){
+@media (max-width: 700px){
 body{
     .navbar {
         background-color: $color-primario;
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         align-items: center;
-        position: relative;
         .logo,
         .logo-b {
             height: 60px;
@@ -339,9 +385,10 @@ body{
         .info-content{
             display: flex;
             flex-direction: column;
+            align-items: center;
             h1{
                 font-size: 2.5rem;
-                padding-top: 2rem;
+                margin-top: 2.2rem;
             }
             h3{
                 font-size: 2rem;
@@ -357,6 +404,7 @@ body{
         h2{
             font-size: 1.5rem;
             height: 5rem;
+            margin-bottom: 1rem;
         }
         .noticia-2,
         .noticia-3{
@@ -407,10 +455,13 @@ body{
                 font-size: .5rem;
             }
         }
+        .copyright{
+            display: none;
+        }
     }
     .footer-contacto{
-        width: 100%;
         display: flex;
+        width: 100%;
         justify-content: space-between;
         .logo-contacto{
             height: 70px;
@@ -418,27 +469,40 @@ body{
             margin: 2rem 1.5rem;
         }
         .informacion-b{
+            font-size: .3rem;
+            align-items: center;
             width: 150px;
-            h2,
-            h3{
-                font-size: .5rem;
+            .direccion,
+            .telefono,
+            .mail{
+                display: flex;
+                align-items: center;
+                margin: 1rem auto;
+                h3{
+                    font-size: .5rem;
+                    padding: .3rem;
+                }
             }
+            
         }
         .redes-contacto{
             justify-content: space-between;
             margin-bottom: 0;
             h2{
-                font-size: .4rem;
+                font-size: .6rem;
             }
             a{
                 font-size: .5rem;
             }
         }
+        .copyright{
+            display: none;
+        }
     }
 }
 }
 
-@media (min-width: 600px) and (max-width: 960px) {
+@media (min-width: 700px) and (max-width: 960px) {
     body{
         .navbar{
             display: flex;
@@ -446,6 +510,7 @@ body{
             align-items: center;
             margin: auto;
             justify-content: center;
+            position: relative;
             .logo{
                 margin-right: 1rem;
             }
@@ -458,29 +523,33 @@ body{
             display: flex;
             width: 100%;
             .info-content{
-                margin: auto;
+                display: none;
             }
         }
         #noticias{
             display: flex;
             flex-direction: column;
             align-items: center;
+            height: 100%;
+            
             .noticia-1,
             .noticia-2,
             .noticia-3{
-                margin-top: 2rem    ;
+                margin-top: 2rem;
+                display: flex;
+                flex-direction: column;
+                
             }
         }
         #publicidad{
             width: 100%;
-            margin-top: 100rem;
             display: flex;
             flex-direction: column;
             .video{
                 display: none;
             }
             .sponsors{
-                padding: 0;
+                padding-top: 3rem;
                 align-items: center;
                 .sponsors-img{
                     display: flex;
@@ -491,6 +560,54 @@ body{
                     }
                 }
             }
-    }
-    
+        }
+        .footer{
+            .informacion{
+                .direccion,
+                .telefono,
+                .mail{
+                    h3{
+                        font-size: .5rem;
+                    }
+                }
+            }
+            .redes{
+                h2{
+                    font-size: 1rem;
+                }
+            }
+            .copyright{
+                font-size: .5rem;
+                h4{
+                    font-size: .3rem;
+                }
+            }
+            
+        }
+        .footer-contacto{
+            .informacion-b{
+                .direccion,
+                .telefono,
+                .mail{
+                    h3{
+                        font-size: .5rem;
+                    }
+                }
+            }
+            .copyright{
+                font-size: .5rem;
+                
+                h4{
+                    font-size: .3rem;
+                }
+            }
+        }
 }}
+@keyframes titulo{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
